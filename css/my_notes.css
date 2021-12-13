@@ -1,0 +1,42 @@
+body {
+    font-family: 'Patrick Hand SC', 'cursive';
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex
+}
+
+.heading {
+    flex: 2;
+}
+
+.item {
+    padding: 10px;
+}
+
+#add {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#add-notes {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: none;
+    /* going to do the display on button click */
+}

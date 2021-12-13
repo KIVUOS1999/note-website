@@ -1,0 +1,125 @@
+ body {
+     margin: 0;
+     padding: 0;
+     background-image: linear-gradient(to bottom right, rgb(202, 223, 255), rgb(131, 220, 255));
+     font-family: 'Patrick Hand SC', 'cursive';
+     overflow: hidden;
+ }
+ 
+ .dot {
+     border-radius: 50%;
+     display: inline-block;
+     position: absolute;
+     z-index: -4;
+ }
+ 
+ .one {
+     animation-iteration-count: infinite;
+     top: 20%;
+     left: 20%;
+     height: 300px;
+     width: 300px;
+     background-image: radial-gradient(circle at top right, rgb(195, 233, 255), rgb(132, 200, 255));
+ }
+ 
+ .two {
+     top: 60%;
+     left: 75%;
+     height: 200px;
+     width: 200px;
+     background-image: linear-gradient(to top right, rgb(197, 227, 255), rgb(73, 173, 255));
+ }
+ 
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 2px;
+ }
+ 
+ .form {
+     display: flex;
+     flex-direction: column;
+     background-color: rgba(255, 255, 255, .45);
+     backdrop-filter: blur(15px);
+     height: 300px;
+     width: 400px;
+     align-items: center;
+     justify-content: center;
+     border-radius: 10px 0px 0px 10px;
+     background-position: center;
+ }
+ 
+ .ad {
+     height: 300px;
+     width: 300px;
+     background-image: url("../static/pencil.jpg");
+     color: white;
+     border-radius: 0px 10px 10px 0px;
+     filter: drop-shadow(1px 2px 4px hsl(220deg 60% 50%));
+ }
+ 
+ .text {
+     margin: 20px;
+     text-align: justify;
+ }
+ 
+ .container {
+     height: 100vh;
+ }
+ 
+ .data {
+     margin: 10px;
+ }
+ 
+ input {
+     font-size: 16px;
+     border-width: 0;
+     border-radius: 5px;
+     border-style: solid;
+     padding: 2px 10px 2px 10px;
+     font-family: 'Patrick Hand SC', cursive;
+ }
+ 
+ button {
+     cursor: pointer;
+     background-image: linear-gradient(to top right, rgb(197, 227, 255), rgb(138, 202, 255));
+     border: none;
+     border-radius: 20px;
+     padding: 10px;
+     margin-top: 20px;
+     filter: drop-shadow(0.5px 1.5px 1px rgb(0, 0, 0));
+     font-family: 'Patrick Hand SC', cursive;
+     font-weight: bold;
+ }
+ 
+ i {
+     color: gray;
+     font-size: 12px;
+     margin-top: 20px;
+ }
+ 
+ a {
+     text-decoration: none;
+     color: rgb(111, 190, 255)
+ }
+ 
+ hr {
+     width: 40%;
+     text-align: left;
+     margin-left: 0;
+     color: white;
+     background-color: white;
+     height: 10px;
+     border-radius: 20px;
+     margin-left: 10px;
+     border: none;
+ }
+ 
+ .branding {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     margin: 0px 2px 2px 0px;
+     color: rgb(139, 168, 211)
+ }

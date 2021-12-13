@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
-<body>
-    <h1>Login</h1>
 
-    <div class="data">
-        Username: 
-        <input type="text" id="username">
+<body>
+    <span class="dot one"></span>
+    <span class="dot two"></span>
+    <div class="container">
+        <div class="form">
+            <div class="data">
+                <input type="text" id="username" placeholder="username">
+            </div>
+            <div class="data">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <button id="authenticate">Authenticate</button>
+            <i>if you havenot created an account <a href = './createUser.html'>click here</a></i>
+        </div>
+        <div class="ad">
+            <h1 class="text">Login</h1>
+            <hr>
+            <div class="text">Login to play with your notes.</div>
+            <div class="branding">Knotes</div>
+        </div>
     </div>
-    
-    <div class="data">
-        Password: 
-        <input type="password" id="password">
-    </div>
-    <button id="authenticate">Authenticate</button>
-    <br><br>
-    <i>if you havenot created an account <a href = './createUser.html'>click here</a></i>
+
     <script src="../js/login.js"></script>
 </body>
+
 </html>

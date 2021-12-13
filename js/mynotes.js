@@ -1,6 +1,6 @@
 curr_user = localStorage.getItem('user')
 console.log(curr_user)
-if(curr_user == "None"){
+if (curr_user == "None" || curr_user == null) {
     url = location.href
     url = url.split('/')
     url[url.length - 1] = "login.html"
@@ -21,55 +21,53 @@ data = {
 let options = {
     method: 'POST',
     headers: {
-        'Content-Type': 
-            'application/json;charset=utf-8'
+        'Content-Type': 'application/json;charset=utf-8'
     },
     body: JSON.stringify(data)
 }
 
 let fetchRes = fetch(url = "https://knote-app-api.herokuapp.com/get-notes", options);
-fetchRes.then(res =>res.json()).then(d => {
+fetchRes.then(res => res.json()).then(d => {
     decorate(d)
 })
 
-decorate = (d)=>{
+decorate = (d) => {
     outer = document.getElementById("available-notes")
-    for(i=0; i<d.length; i++){
+    for (i = 0; i < d.length; i++) {
         para = document.createElement("p")
         div = document.createElement("div")
-        div.setAttribute("id", "data-"+d[i]._id)
+        div.setAttribute("id", "data-" + d[i]._id)
         node = document.createTextNode(d[i].data)
 
         node_del = document.createElement("button")
-        node_del.innerHTML ="Delete"
+        node_del.innerHTML = "Delete"
         node_del.classList.add("delete")
         node_del.setAttribute("id", d[i]._id)
-        node_del.addEventListener("click", (e)=>{
+        node_del.addEventListener("click", (e) => {
             data = {
                 'id': e.target.id,
             }
-            
+
             let options = {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 
-                        'application/json;charset=utf-8'
+                    'Content-Type': 'application/json;charset=utf-8'
                 },
                 body: JSON.stringify(data)
             }
-            
+
             let fetchRes = fetch(url = "https://knote-app-api.herokuapp.com/delete-note", options);
-            fetchRes.then(res =>res.json()).then(d => {
+            fetchRes.then(res => res.json()).then(d => {
                 location.reload()
             })
         })
 
-        
+
         node_edit = document.createElement("button")
-        node_edit.innerHTML ="Edit"
-        node_edit.setAttribute("id", "edit-"+d[i]._id)
-        node_edit.addEventListener("click", (e)=>{
-            a = "data-"+e.target.id.split('-')[1]
+        node_edit.innerHTML = "Edit"
+        node_edit.setAttribute("id", "edit-" + d[i]._id)
+        node_edit.addEventListener("click", (e) => {
+            a = "data-" + e.target.id.split('-')[1]
             text_area = document.getElementById(a)
             prev_text = text_area.innerHTML
             text_area.innerHTML = `
@@ -85,23 +83,22 @@ decorate = (d)=>{
     }
 }
 
-update = (id)=>{
-    user = { 
-        "id": `${id}`, 
+update = (id) => {
+    user = {
+        "id": `${id}`,
         "data": document.getElementById(`edit-box-${id}`).value
     }
 
     let options = {
         method: 'POST',
         headers: {
-            'Content-Type': 
-                'application/json;charset=utf-8'
+            'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(user)
     }
 
     let fetchRes = fetch(url = "https://knote-app-api.herokuapp.com/update-particular-notes", options);
-    fetchRes.then(res =>res.json()).then(d => {
+    fetchRes.then(res => res.json()).then(d => {
         alert(d.data)
         location.reload();
     })
