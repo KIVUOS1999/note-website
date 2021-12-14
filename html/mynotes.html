@@ -7,27 +7,35 @@
     <link rel="stylesheet" href="../css/my_notes.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
     <title>My notes</title>
 </head>
 
 <body>
     <div class="container">
+
+        <div id="available-notes"></div>
+
+        <div class="glass-hidden" id="glass"></div>
+
+        <div class="add-notes-hidden" id="add-notes">
+            <textarea type="text" id="add-notes-1"></textarea>
+            <button id="add"></button>
+        </div>
+
         <div class="navbar">
-            <div class="item heading">All saved notes of</div>
-            <div class="item" id="user-name"></div>
-            <div class="item"><a href=# id="logout">Logout</a></div>
-        </div>
-
-        <div id="available-notes">
-
-        </div>
-
-
-        <div class="add-notes">
-            <input type="text" id="add-notes">
-            <button id="add">Add notes</button>
+            <div class="item heading">Knotes</div>
+            <button class="new" id="new"></button>
+            <div class="item logout">
+                <a href=# id="logout">
+                    <img src="../static/logout.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
+
 
 
 

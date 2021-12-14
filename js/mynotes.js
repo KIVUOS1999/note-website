@@ -1,5 +1,4 @@
 curr_user = localStorage.getItem('user')
-console.log(curr_user)
 if (curr_user == "None" || curr_user == null) {
     url = location.href
     url = url.split('/')
@@ -7,12 +6,6 @@ if (curr_user == "None" || curr_user == null) {
     url = url.join('/')
     location.replace(url)
 }
-
-user_name = document.getElementById('user-name')
-sp = document.createElement('span')
-node = document.createTextNode(curr_user)
-sp.appendChild(node)
-user_name.appendChild(sp)
 
 data = {
     'id': curr_user
@@ -34,13 +27,14 @@ fetchRes.then(res => res.json()).then(d => {
 decorate = (d) => {
     outer = document.getElementById("available-notes")
     for (i = 0; i < d.length; i++) {
-        para = document.createElement("p")
+        para = document.createElement("div")
+        para.setAttribute("class", "para")
         div = document.createElement("div")
         div.setAttribute("id", "data-" + d[i]._id)
+        div.setAttribute("class", "data")
         node = document.createTextNode(d[i].data)
 
         node_del = document.createElement("button")
-        node_del.innerHTML = "Delete"
         node_del.classList.add("delete")
         node_del.setAttribute("id", d[i]._id)
         node_del.addEventListener("click", (e) => {
@@ -64,21 +58,33 @@ decorate = (d) => {
 
 
         node_edit = document.createElement("button")
-        node_edit.innerHTML = "Edit"
         node_edit.setAttribute("id", "edit-" + d[i]._id)
+        node_edit.setAttribute("class", "edit")
         node_edit.addEventListener("click", (e) => {
             a = "data-" + e.target.id.split('-')[1]
             text_area = document.getElementById(a)
             prev_text = text_area.innerHTML
             text_area.innerHTML = `
-            <input type=text, id=edit-box-${e.target.id.split('-')[1]} value="${prev_text}"}></input>
-            <button id = edit-box-done-${e.target.id.split('-')[1]}, onclick = "update('${e.target.id.split('-')[1]}')">Done</button>
+            <textarea type=text class = edit-box-text id=edit-box-${e.target.id.split('-')[1]}>${prev_text}</textarea>
+            <div class="inside-control">
+                <button class = edit-box-button id = edit-box-done-${e.target.id.split('-')[1]}, onclick = "update('${e.target.id.split('-')[1]}')">
+                </button>
+                <button class = cancel-box-button id = cancel-box-done-${e.target.id.split('-')[1]}, onclick = "cancel('${e.target.id.split('-')[1]}')">
+                </button>
+            </div>
             `
+            control = document.getElementById(`control-${e.target.id.split('-')[1]}`)
+            control.style.display = "None"
         })
+
+        control = document.createElement("div")
+        control.setAttribute("class", `control ${d[i]._id}`)
+        control.setAttribute("id", `control-${d[i]._id}`)
         div.appendChild(node)
         para.appendChild(div)
-        para.appendChild(node_del)
-        para.appendChild(node_edit)
+        control.appendChild(node_del)
+        control.appendChild(node_edit)
+        para.appendChild(control)
         outer.appendChild(para)
     }
 }
@@ -103,3 +109,37 @@ update = (id) => {
         location.reload();
     })
 }
+
+cancel = (id) => {
+    console.log("pressed cancel");
+    a = document.getElementById(`edit-box-${id}`)
+    prev = a.value
+    console.log(prev);
+    console.log(a);
+    b = document.getElementById(`data-${id}`)
+    b.innerHTML = prev
+    control = document.getElementById(`control-${id}`)
+    control.style.display = "flex"
+}
+
+n = document.getElementById("new")
+n.addEventListener("click", () => {
+    a = document.getElementById("add-notes")
+    glass = document.getElementById("glass")
+
+
+
+    if (a.className == "add-notes-hidden") {
+        glass.classList.remove("glass-hidden")
+        a.classList.remove("add-notes-hidden")
+        a.classList.toggle("add-notes-visible")
+        glass.classList.toggle("glass-visible")
+    } else {
+        glass.classList.remove("glass-visible")
+        a.classList.remove("add-notes-visible")
+        a.classList.toggle("add-notes-hidden")
+        glass.classList.toggle("glass-hidden")
+    }
+
+
+})
