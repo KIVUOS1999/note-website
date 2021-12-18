@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nothing You Could Do', cursive;
+    background-image: url("../static/img-noise-361x370.png")
+}
+
+input,
+button {
+    font-family: 'Patrick Hand SC', 'cursive';
+    font-size: 24px;
+    border: none;
+    background-color: rgb(253, 237, 184);
+}
+
+input:-webkit-autofill {
+    border: yellow;
+    background-color: transparent;
+}
+
+button {
+    border: solid;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 237, 184);
+    height: 300px;
+    width: 400px;
+    align-items: center;
+    justify-content: space-around;
+    background-position: center;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(2deg);
+}
+
+.ad {
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(184, 253, 209);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(4deg);
+    font-weight: bold;
+}
+
+.branding {
+    font-family: 'Patrick Hand SC', 'cursive';
+    padding: 10px;
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    color: rgb(140, 140, 140);
+    font-size: 24px;
+}
+
+#ani {
+    display: flex;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#cursor {
+    animation: blink 0.5s infinite;
+}
+
+#show {
+    margin-left: 5px;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.message {
+    color: gray;
+}
+
+button {
+    transition: .15s linear;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gray;
+    color: white;
+}

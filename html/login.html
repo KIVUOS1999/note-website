@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../css/login_sticky.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 
 <body>
-    <span class="dot one"></span>
-    <span class="dot two"></span>
+    <!-- <span class="dot one"></span>
+    <span class="dot two"></span> -->
     <div class="container">
         <div class="form">
             <div class="data">
@@ -24,17 +26,23 @@
                 <input type="password" id="password" placeholder="Password">
             </div>
             <button id="authenticate">Authenticate</button>
-            <i>if you havenot created an account <a href = './createUser.html'>click here</a></i>
+            <span class='i'><span class="message">if you havenot created an account</span> <a href='./createUser.html'>click here</a></span>
         </div>
         <div class="ad">
             <h1 class="text">Login</h1>
-            <hr>
-            <div class="text">Login to play with your notes.</div>
-            <div class="branding">Knotes</div>
+            <div id="ani">
+                <div class="text">Login to</div>
+                <div id="show">
+                </div>
+                <span id="cursor">|</span>
+            </div>
         </div>
+
     </div>
+    <div class="branding">Knotes</div>
 
     <script src="../js/login.js"></script>
+    <script src="../js/message.js"></script>
 </body>
 
 </html>

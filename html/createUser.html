@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login_sticky.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
     <title>Create User</title>
 </head>
 
 <body>
 
     <div class="container">
-        <span class="dot one"></span>
-        <span class="dot two"></span>
+        <!-- <span class="dot one"></span>
+        <span class="dot two"></span> -->
         <div class="form">
             <div class="data">
                 <input type="text" id="username" placeholder="username">
@@ -31,13 +34,19 @@
             <i>if you have an account <a href='./login.html'>click here</a></i>
         </div>
         <div class="ad">
-            <h1 class="text">Create Account</h1>
-            <hr>
-            <div class="text">A new way to keep save and syncronize your notes starts here.</div>
-            <div class="branding">Knotes</div>
+            <h1 class="text">Create account</h1>
+            <div id="ani">
+                <div class="text">to</div>
+                <div id="show">
+                </div>
+                <span id="cursor">|</span>
+            </div>
+
         </div>
     </div>
+    <div class="branding">Knotes</div>
     <script src="../js/createUser.js"></script>
+    <script src="../js//message.js"></script>
 </body>
 
 </html>

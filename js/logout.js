@@ -1,5 +1,5 @@
 logout_btn = document.getElementById("logout")
-logout_btn.addEventListener('click', ()=>{
+logout_btn.addEventListener('click', () => {
     localStorage.setItem('user', 'None')
 
     url = location.href
@@ -8,5 +8,4 @@ logout_btn.addEventListener('click', ()=>{
     url = url.join('/')
     location.replace(url)
 
-    alert("Adious amigo")
 })
