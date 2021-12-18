@@ -269,3 +269,13 @@ button,
 .logout img {
     transition: transform .15s linear;
 }
+
+#loader {
+    background: rgb(243, 255, 201) url('../static/loader.gif');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    z-index: 100;
+}
