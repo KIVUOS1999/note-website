@@ -21,7 +21,7 @@ let options = {
 
 let fetchRes = fetch(url = "https://knote-app-api.herokuapp.com/get-notes", options);
 fetchRes.then(res => res.json()).then(d => {
-    decorate(d)
+    decorate(d.data)
     loader = document.getElementById("loader")
     loader.style.display = "none"
 })
