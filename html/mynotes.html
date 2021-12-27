@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/my_notes.css">
+    <link rel="stylesheet" href="../css/add.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,23 @@
 <body>
     <div id="loader">
     </div>
+
+    <div id="app_add">
+        <div class="app_add_data">
+            <div id="app_add_msg">
+
+            </div>
+            <div class="btn">
+                <button id="app_add_download">
+                    Download
+                </button>
+                <button id="app_add_cancel">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
 
         <div id="available-notes"></div>
@@ -38,13 +56,10 @@
         </div>
     </div>
 
-
-
-
-
     <script src="../js/mynotes.js"></script>
     <script src="../js/addnotes.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/popup.js"></script>
 </body>
 
 </html>
