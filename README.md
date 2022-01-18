@@ -15,7 +15,7 @@ I have tried to mimic the style of sticky notes.
 <table>
 
 - After the login with correct credential you will be able to see/modify/delete your notes. This is some picture of all your notes. Pencil is the sign to edit, X is to delete, + is to add a new note, bottom-right icon is to logout.
-<img src="https://dm2306files.storage.live.com/y4mNKQfUzSLI-oyBqoLhi05T6U_gBm8kMgMqLtEBTK_ZzwY9E1WuvaLlW7Lnt9Rv9pRbP6CdB8je60PFYLSsMMc0d9Y85AsaiJ6XKsfCQl9vHZCIdq4s0UVYaPJXPPfvTKzSatlUkT1ooXMSOggLdByc07j1ok-zSSXx0F7tG9SgOrD_1qafznK3YNlEO9b7Q3S?width=947&height=816&cropmode=none" width="947" height="816" />
+<img src="https://dm2306files.storage.live.com/y4mNKQfUzSLI-oyBqoLhi05T6U_gBm8kMgMqLtEBTK_ZzwY9E1WuvaLlW7Lnt9Rv9pRbP6CdB8je60PFYLSsMMc0d9Y85AsaiJ6XKsfCQl9vHZCIdq4s0UVYaPJXPPfvTKzSatlUkT1ooXMSOggLdByc07j1ok-zSSXx0F7tG9SgOrD_1qafznK3YNlEO9b7Q3S?width=947&height=816&cropmode=none"/>
 
 Here is a small video of the website.
 
